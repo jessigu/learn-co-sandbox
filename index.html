@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Listening to Nodes</title>
+    <style>
+     div {
+       border: 1px solid red;
+       padding: 6px;
+       min-height: 12px;
+     }
+    </style>
+  </head>
+
+  <body>
+    <main id="main">My ID is "main"!</main>
+    <script>
+    const main = document.getElementById('main')
+    main.addEventListener('click', function(event) {
+      alert('I was clicked!')
+    })
+    </script>
+    <br />
+
+    <div>
+      <label>Input:</label><input />
+      <script>
+        const input = document.querySelector('input')
+        input.addEventListener('keydown', function(e) {
+          if (e.which === 71) {
+            return e.preventDefault()
+          }
+        })
+      </script>
+    </div>
+
+    <br /> 
+    <div>
+      1
+      <div>
+        2
+        <div>
+          3
+          <div>
+            4
+            <div>
+              5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
